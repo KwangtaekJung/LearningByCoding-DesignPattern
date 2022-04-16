@@ -1,14 +1,16 @@
 package com.example.inflearndesignpattern._01_creational_patterns._02_factorymethod._03_java;
 
 import com.example.inflearndesignpattern._01_creational_patterns._02_factorymethod._02_after.BlackShip;
-import com.example.inflearndesignpattern._01_creational_patterns._02_factorymethod._02_after.java8.WhiteShip;
+import com.example.inflearndesignpattern._01_creational_patterns._02_factorymethod._02_after.using_abstract_class.WhiteShip;
 
 public class SimpleFactory {
 
     /**
-     * 가장 기본적인 Simple Factory Pattern
+     * Simple Factory Pattern<br>
+     * returns a different instance according to the name
+     *
      * @param name Ship Name
-     * @return
+     * @return Ship Instance
      */
     public Object createProduct(String name) {
 
