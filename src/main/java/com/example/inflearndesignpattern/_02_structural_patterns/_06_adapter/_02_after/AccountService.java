@@ -1,6 +1,9 @@
 package com.example.inflearndesignpattern._02_structural_patterns._06_adapter._02_after;
 
-public class AccountService {
+import com.example.inflearndesignpattern._02_structural_patterns._06_adapter._02_after.security.UserDetails;
+import com.example.inflearndesignpattern._02_structural_patterns._06_adapter._02_after.security.UserDetailsService;
+
+public class AccountService implements UserDetailsService {
 
     public Account findAccountByUsername(String username) {
         Account account = new Account();
@@ -18,4 +21,8 @@ public class AccountService {
 
     }
 
+    @Override
+    public UserDetails loadUser(String username) {
+        return findAccountByUsername(username);
+    }
 }
