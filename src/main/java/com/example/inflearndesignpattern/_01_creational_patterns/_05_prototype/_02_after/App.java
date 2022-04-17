@@ -17,12 +17,12 @@ public class App {
         GithubIssue clone = (GithubIssue) githubIssue.clone();
         System.out.println(clone.getUrl());
 
-        repository.setUser("otherUser"); //shallow copy이므로 githubIssune도 동일하게 변경된다.
+        repository.setUser("otherUser"); //deep copy
 
         System.out.println(clone != githubIssue);
         System.out.println(clone.equals(githubIssue));
         System.out.println(clone.getClass() == githubIssue.getClass());
-        System.out.println(clone.getRepository() == githubIssue.getRepository()); //shallow copy 이므로 Repository는 동일 객체를 가리킨다.
+        System.out.println(clone.getRepository() == githubIssue.getRepository()); //deep copy => 본래 자기의 값 유지한다.
 
         System.out.println(clone.getUrl());
     }
