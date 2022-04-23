@@ -16,11 +16,12 @@ public class DecoratorInJava {
         List books = Collections.checkedList(list, Book.class);
 
 
-//        books.add(new Item());
+        list.add(new Item());
+//        books.add(new Item()); //ClassCastException 발생함.
 
         List unmodifiableList = Collections.unmodifiableList(list);
         list.add(new Item());
-        unmodifiableList.add(new Book());
+//        unmodifiableList.add(new Book());  //UnsupportedOperationException 발생
 
 
         // 서블릿 요청 또는 응답 랩퍼
