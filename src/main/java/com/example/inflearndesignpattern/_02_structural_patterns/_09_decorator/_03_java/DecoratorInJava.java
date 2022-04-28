@@ -13,6 +13,7 @@ public class DecoratorInJava {
         ArrayList list = new ArrayList<>();
         list.add(new Book());
 
+        //Book.class만 넣을 수 있는 리스트로 변환한다.
         List books = Collections.checkedList(list, Book.class);
 
 
