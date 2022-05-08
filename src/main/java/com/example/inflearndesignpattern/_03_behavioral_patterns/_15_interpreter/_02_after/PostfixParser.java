@@ -2,6 +2,10 @@ package com.example.inflearndesignpattern._03_behavioral_patterns._15_interprete
 
 import java.util.Stack;
 
+import static com.example.inflearndesignpattern._03_behavioral_patterns._15_interpreter._02_after.PostfixExpression.minus;
+import static com.example.inflearndesignpattern._03_behavioral_patterns._15_interpreter._02_after.PostfixExpression.plus;
+import static com.example.inflearndesignpattern._03_behavioral_patterns._15_interpreter._02_after.PostfixExpression.variable;
+
 public class PostfixParser {
     public static PostfixExpression parser(String expression) {
         Stack<PostfixExpression> stack = new Stack<>();
@@ -14,13 +18,13 @@ public class PostfixParser {
     private static PostfixExpression getExpression(char c, Stack<PostfixExpression> stack) {
         switch (c) {
             case '+':
-                return new PlusExpression(stack.pop(), stack.pop());
+                return plus(stack.pop(), stack.pop());
             case '-':
                 PostfixExpression right = stack.pop();
                 PostfixExpression left = stack.pop();
-                return new MinusExpression(left, right);
+                return minus(left, right);
             default:
-                return new VariableExpression(c);
+                return variable(c);
         }
     }
 }
