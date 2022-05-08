@@ -13,18 +13,16 @@ public class Client {
         board.addPost("지금 이 자리에 계신 여러분들은 모두 디자인 패턴을 학습하고 계신 분들입니다.");
 
         // TODO 들어간 순서대로 순회하기 1
-//        Iterator<Post> iterator = board.getPosts().iterator();
-//        while (iterator.hasNext()) {
-//            System.out.println(iterator.next().getTitle());
-//        }
-
-        // TODO 들어간 순서대로 순회하기 2
-        Iterator<Post> defaultIterator = board.getDefaultIterator();
+        Iterator<Post> defaultIterator = board.getPosts().iterator();
         while (defaultIterator.hasNext()) {
             System.out.println(defaultIterator.next().getTitle());
         }
 
         // TODO 가장 최신 글 먼저 순회하기
+        Iterator<Post> recentPostIterator = board.getRecentPostIterator();
+        while (recentPostIterator.hasNext()) {
+            System.out.println(recentPostIterator.next().getTitle());
+        }
     }
 
 }

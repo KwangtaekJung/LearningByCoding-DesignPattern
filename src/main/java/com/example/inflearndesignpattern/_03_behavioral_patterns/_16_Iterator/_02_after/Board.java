@@ -10,10 +10,9 @@ public class Board {
 
     List<Post> posts = new ArrayList<>();
 
-    // TODO 들어간 순서대로 순회하기 1
-//    public List<Post> getPosts() {
-//        return posts;
-//    }
+    public List<Post> getPosts() {
+        return posts;
+    }
 
     public void setPosts(List<Post> posts) {
         this.posts = posts;
@@ -23,8 +22,7 @@ public class Board {
         this.posts.add(new Post(content));
     }
 
-    // TODO 들어간 순서대로 순회하기 2
-    public Iterator<Post> getDefaultIterator() {
-        return this.posts.iterator();
+    public Iterator<Post> getRecentPostIterator() {
+        return new RecentPostIterator(this.posts);
     }
 }
