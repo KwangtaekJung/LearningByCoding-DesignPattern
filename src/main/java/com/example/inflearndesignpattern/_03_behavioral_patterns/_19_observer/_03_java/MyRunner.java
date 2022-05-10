@@ -16,6 +16,6 @@ public class MyRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        publisher.publishEvent(new MyEvent("hello spring event"));
+        publisher.publishEvent(new MyEvent(this, "hello spring event"));
     }
 }

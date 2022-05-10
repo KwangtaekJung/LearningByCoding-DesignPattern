@@ -1,10 +1,13 @@
 package com.example.inflearndesignpattern._03_behavioral_patterns._19_observer._03_java;
 
-public class MyEvent {
+import org.springframework.context.ApplicationEvent;
+
+public class MyEvent extends ApplicationEvent {
 
     private String message;
 
-    public MyEvent(String message) {
+    public MyEvent(Object source, String message) {
+        super(source);
         this.message = message;
     }
 
