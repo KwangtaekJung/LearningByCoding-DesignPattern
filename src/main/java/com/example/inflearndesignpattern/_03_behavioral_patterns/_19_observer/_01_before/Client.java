@@ -13,6 +13,6 @@ public class Client {
         System.out.println(user2.getMessage("디자인패턴"));
 
         user1.sendMessage("디자인패턴", "예제 코드 보는 중..");
-        System.out.println(user2.getMessage("디자인패턴"));
+        System.out.println(user2.getMessage("디자인패턴"));  //Polling Mechanism 필요함.
     }
 }

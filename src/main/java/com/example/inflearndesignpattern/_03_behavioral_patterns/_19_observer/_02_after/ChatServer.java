@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Subject
+ */
 public class ChatServer {
 
     private Map<String, List<Subscriber>> subscribers = new HashMap<>();

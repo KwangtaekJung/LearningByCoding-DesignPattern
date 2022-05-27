@@ -5,6 +5,9 @@ import java.util.Observer;
 
 public class ObserverInJava {
 
+    /**
+     * Concrete Observer
+     */
     static class User implements Observer {
         @Override
         public void update(Observable o, Object arg) {
@@ -12,6 +15,9 @@ public class ObserverInJava {
         }
     }
 
+    /**
+     * Subject
+     */
     static class Subject extends Observable {
         public void add(String message) {
             setChanged();  //노티를 받기 위해서는 상태가 변경되었다고 설정해주어야 한다.
