@@ -1,4 +1,4 @@
-package com.example.inflearndesignpattern._03_behavioral_patterns._022_template._04_java;
+package com.example.inflearndesignpattern._03_behavioral_patterns._22_template._04_java;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpEntity;

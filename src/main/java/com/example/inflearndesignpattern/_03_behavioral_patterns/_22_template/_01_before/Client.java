@@ -1,4 +1,4 @@
-package com.example.inflearndesignpattern._03_behavioral_patterns._022_template._01_before;
+package com.example.inflearndesignpattern._03_behavioral_patterns._22_template._01_before;
 
 public class Client {
 

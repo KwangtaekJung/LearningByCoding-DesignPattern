@@ -1,23 +1,23 @@
-package com.example.inflearndesignpattern._03_behavioral_patterns._022_template._03_after_template_callback;
+package com.example.inflearndesignpattern._03_behavioral_patterns._22_template._01_before;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FileProcessorWithTemplateCallBack {
+public class MultuplyFileProcessor {
 
     private String path;
 
-    public FileProcessorWithTemplateCallBack(String path) {
+    public MultuplyFileProcessor(String path) {
         this.path = path;
     }
 
-    public int process(Operator operator) {
+    public int process() {
         try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
             int result = 0;
             String line = null;
             while ((line = reader.readLine()) != null) {
-                result = operator.getResult(result, Integer.parseInt(line));
+                result *= Integer.parseInt(line);
             }
             return result;
         } catch (IOException e) {

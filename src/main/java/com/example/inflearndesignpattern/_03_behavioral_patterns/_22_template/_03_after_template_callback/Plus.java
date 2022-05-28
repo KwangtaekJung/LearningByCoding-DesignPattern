@@ -1,4 +1,4 @@
-package com.example.inflearndesignpattern._03_behavioral_patterns._022_template._03_after_template_callback;
+package com.example.inflearndesignpattern._03_behavioral_patterns._22_template._03_after_template_callback;
 
 public class Plus implements Operator {
     @Override
